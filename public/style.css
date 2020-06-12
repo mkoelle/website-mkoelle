@@ -1,0 +1,23 @@
+.profile-container{
+  width: 100%;
+  height: inherit;
+  position: absolute;
+}
+.profile-img {
+  background: #000;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  margin-left: -200px;
+  height: inherit;
+}
+.profile-img img {
+  border-radius: 50%;
+  margin-top: 30px;
+  width: 400px;
+  height: 400px;
+  height: inherit;
+}
+.no-wrap {
+  white-space: nowrap;
+}
