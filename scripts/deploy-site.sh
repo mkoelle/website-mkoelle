@@ -17,5 +17,7 @@ set -x
 bucket=$(aws cloudformation list-exports --query "Exports[?Name=='${s3_bucket_key}'].Value" --output text)
 
 pushd "${PROJECT_DIR}"
-  aws s3 sync public s3://${bucket}
+  npm ci
+  npm run build
+  aws s3 sync dist s3://${bucket}
 popd

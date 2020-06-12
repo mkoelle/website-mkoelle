@@ -1,0 +1,21 @@
+{
+  "name": "mkoelle.com",
+  "version": "0.1.0",
+  "description": "This project is holds the infrastructure and content to host my personal site via AWS S3 and Cloudfront.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx @11ty/eleventy --serve",
+    "prebuild": "rimraf ./dist",
+    "build": "npx @11ty/eleventy",
+    "debug": "DEBUG=* eleventy"
+  },
+  "author": {
+    "name": "Mark Koelle",
+    "email": "mkoelle@gmail.com",
+    "url": "https://mkoelle.com/"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.0"
+  }
+}
