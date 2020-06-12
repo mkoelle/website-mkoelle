@@ -7,7 +7,8 @@ This project is holds the infrastructure and content to host my personal site vi
 Folders:
 
 - `infra` contains the cloudformation templates used for deploying the infrastructure
-- `src` root directory for the website content
+- `src` root directory for the dynamic website content
+- `static` root directory for the static website content
 - `dist` transpiled webpage assets, ready for hosting, created when `npm start` or `npm run build` execute
 - `scripts` locally and ci executable scripts for deployment and validation
 

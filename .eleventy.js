@@ -1,16 +1,17 @@
 // docs: https://www.11ty.io/docs/config/
 
-module.exports = function(eleventyConfig) {
-  
-  // eleventyConfig.addFilter( "myFilter", function() {});
-  eleventyConfig.setTemplateFormats([
-    "png",
-    "css" // css is not yet a recognized template extension in Eleventy
-  ]);
+const pluginSass = require("eleventy-plugin-sass");
+
+module.exports = function (eleventyConfig) {
+  sassPluginOptions = { watch: ["src/**/*.{scss,sass}", "!node_modules/**"] };
+  eleventyConfig.addPlugin(pluginSass, sassPluginOptions);
+
+  eleventyConfig.addPassthroughCopy({ static: "/" });
+
   return {
     dir: {
       input: "src",
-      output: "dist"
-    }
+      output: "dist",
+    },
   };
 };
