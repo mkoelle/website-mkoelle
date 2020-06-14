@@ -12,6 +12,19 @@ body {
   flex: 1;
 }
 
-.hero-image{
-  max-width:30em
+.hero-image {
+  max-width: 30em;
+}
+
+.resume * {
+  .title:not(h1) {
+    margin-top: 0.75em;
+    margin-bottom: 0.75em;
+  }
+}
+
+.resume .site-content {
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-size: 12pt;
+  padding-top: 2em;
 }

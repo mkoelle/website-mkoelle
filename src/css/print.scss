@@ -1,0 +1,44 @@
+// Don't print web only sections
+@media print {
+  header,
+  footer,
+  .navbar {
+    display: none;
+  }
+}
+
+// Replace dark background with border
+@media print {
+  .has-background-dark {
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: white;
+  }
+}
+
+// Push the default header and footer out of the printable area
+@media print {
+  @page {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  body {
+    padding-top: 0.5em;
+    padding-bottom: 1em;
+  }
+}
+
+// Avoid awkward page breaks
+@media print {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    page-break-after: avoid;
+  }
+  table,
+  figure {
+    page-break-inside: avoid;
+  }
+}

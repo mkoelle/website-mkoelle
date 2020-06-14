@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="robots" content="index, follow" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <meta name="language" content="en-EN" />
+  <meta name="author" content="Mark Koelle" />
+  <title>Mark Koelle - Resume</title>
+
+  <link rel="icon" type="image/png" sizes="128x128" href="/img/head_shot_128x128.png" />
+
+  <link rel="stylesheet" href="https://jenil.github.io/bulmaswatch/darkly/bulmaswatch.min.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <link rel="stylesheet" href="/css/main.css" />
+</head>
+
+<body class="resume">
+  <section class="section site-content">
+    <div class="container">
+      <div class="columns">
+        <div class="column has-background-dark" style=" flex: 1;">
+          <section class="Contact">
+            <h1 class="title is-size-2">
+              <%= profile.my.name %>
+            </h1>
+            <p class="subtitle">
+              <%= profile.my.title %>
+            </p>
+            <div class="columns">
+              <div class="column">
+                <p><%= profile.my.city %></p>
+                <p><%= profile.my.phone %></p>
+                <p><%= profile.my.mail %></p>
+              </div>
+              <div class="column has-text-right">
+                <p><a href="<%= profile.social.twitter.link %>" class="no-wrap"><%= profile.social.twitter.name %>
+                    <span class="icon"><i class="fab fa-twitter"></i></span>
+                  </a></p>
+                <p><a href="<%= profile.social.linkedin.link %>" class="no-wrap"><%= profile.social.linkedin.name %>
+                    <span class="icon"><i class="fab fa-linkedin-in"></i></span>
+                  </a></p>
+                <p><a href="<%= profile.social.github.link %>" class="no-wrap"><%= profile.social.github.name %>
+                    <span class="icon"><i class="fab fa-github"></i></span>
+                  </a></p>
+              </div>
+            </div>
+
+          </section>
+          <div class="experience">
+            <div class="title is-size-5 has-text-primary has-text-weight-bold">
+              EXPERIENCE
+            </div>
+
+            <% carrer.positions.forEach(function(position){ %>
+            <div class="item">
+              <div class="is-size-6">
+                <p><b><%= position.title %> - <span class="no-wrap"><%= position.period %></span></b></p>
+                <span class="has-text-weight-semi-bold">
+                  <%= position.company %> - <%= position.location %>
+                </span>
+              </div>
+            </div>
+            <% }); %>
+          </div>
+
+
+          <div class="skills">
+            <div class="title is-size-5 has-text-primary has-text-weight-bold">
+              SKILLS
+            </div>
+            <div class="wrapper">
+              <% carrer.skills.forEach(function(skill){ %>
+              <div class="item">
+                <div><%= skill.name %></div>
+                <progress class="progress is-primary is-small" value="<%= skill.progress %>"
+                  max="100"><%= skill.progress %>%</progress>
+              </div>
+              <% }); %>
+            </div>
+          </div>
+          <div class="education">
+            <div class="title is-size-5 has-text-primary has-text-weight-bold">
+              EDUCATION
+            </div>
+
+            <% carrer.education.forEach(function(certification){ %>
+            <div class="item">
+              <div class="is-size-6">
+                <p><b><%= certification.degree %> - <%= certification.period %></b></p>
+                <span class="has-text-weight-semi-bold">
+                  <%= certification.university %> - <%= certification.city %><i></i>
+                </span>
+              </div>
+              <div><%= certification.faculty %></div>
+            </div>
+            <% }); %>
+          </div>
+          <div class="languages">
+            <div class="title is-size-5 has-text-primary has-text-weight-bold">
+              LANGUAGES
+            </div>
+            <div class="wrapper">
+              <%= profile.languages.join(', ') %>
+            </div>
+          </div>
+        </div>
+        <div class="column is-two-thirds">
+          <div class="summary">
+            <div class="title is-size-5 has-text-primary has-text-weight-bold">
+              SUMMARY
+            </div>
+            <div class="wrapper">
+              <%= carrer.summary %>
+            </div>
+          </div>
+
+          <div class="projects">
+            <div class="title is-size-5 has-text-primary has-text-weight-bold">
+              PROJECTS
+            </div>
+
+            <% carrer.projects.forEach(function(proj){ %>
+            <div class="item">
+              <div class="is-size-5">
+                <b><%= proj.title %></b>
+                —
+                <i><%= proj.company %></i>
+              </div>
+              <div class="is-size-7"><%= proj.period %></div>
+            </div>
+            <% }); %>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        <a href="/resume/">Resume </a> | <a href="#">CV </a> |
+        <a href="https://github.com/mkoelle">GitHub</a> |
+        <a href="https://www.linkedin.com/in/mkoelle/">Linkdn</a> |
+        <a href="https://twitter.com/mkoelle">Twitter</a>
+      </p>
+    </div>
+    <link rel="stylesheet" href="/css/print.css" />
+  </footer>
+</body>
+
+</html>
