@@ -70,6 +70,12 @@ Deploy
 ./scripts/deploy-site.sh
 ```
 
+Creating QR Codes
+
+``` bash
+npx qrcode --output static/img/qr_resume_01.png  https://shadow.mkoelle.com/resume/01
+```
+
 ## Additional Documentation
 
 All about that style
