@@ -55,6 +55,15 @@ Deploy
 
 ``` bash
 # Requires active AWS session
+# Requires that a specific hosted zone already be created with specific stack outputs
+# Hardcoded to look for an CFN export value to get hosted zone
+# Uses aws cli to deploy the bucket, bucket policy, cloudfront, OAI, certificate, & associated DNS entry
+./infra/deploy-infra.sh
+```
+
+``` bash
+# Requires active AWS session
+# Requires deploy-infra already ran
 # Hardcoded to look for an CFN export value to get bucket arn
 # Runs npm ci and build
 # Uses aws s3 sync to deploy
@@ -63,6 +72,14 @@ Deploy
 
 ## Additional Documentation
 
+All about that style
+
+- [Fonts; Georgia is better than Garamond](https://designforhackers.com/blog/garamond/)
+
+Get it in print
+
+- [Cascading Style Sheets @page](https://developer.mozilla.org/en-US/docs/Web/CSS/@page)
+- [CSS Paged Media Module](https://www.w3.org/TR/css-page-3/#cascading-and-page-context)
+- [How to create a printer-friendly website using print stylesheets](https://blog.tbhcreative.com/2019/06/website-print-friendly-styling.html)
 - [How to Create Printer-friendly Pages with CSS](https://www.sitepoint.com/css-printer-friendly-pages/)
 - [Print CSS basics in 10 minutes](https://www.paperplane.app/blog/print-css-basics/)
-- [How to create a printer-friendly website using print stylesheets](https://blog.tbhcreative.com/2019/06/website-print-friendly-styling.html)
