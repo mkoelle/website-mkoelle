@@ -21,6 +21,8 @@
   @page {
     margin-top: 0;
     margin-bottom: 0;
+    margin-left: 1em;
+    margin-right: 1em;
   }
   body {
     padding-top: 0.5em;
@@ -41,4 +43,11 @@
   figure {
     page-break-inside: avoid;
   }
+}
+
+// Adjust font size for printing
+@media print {
+  .resume * {
+  font-size: 10pt;
+}
 }
