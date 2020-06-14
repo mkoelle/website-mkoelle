@@ -76,6 +76,18 @@ Creating QR Codes
 npx qrcode --output static/img/qr_resume_01.png  https://shadow.mkoelle.com/resume/01
 ```
 
+### TODO
+
+- Data Completion (enough for single page)
+- Data Completion (enough for CV)
+- Single Page Resume Template
+- Automated Visual Regression Testing
+- Applicant Tracking System (ATS) Scan
+- Cloudfront Pretty URLS
+- Github Actions
+  - Quality Checks
+  - Deployment
+
 ## Additional Documentation
 
 All about that style
